@@ -42,3 +42,24 @@ void convertTemperature() {
     else
         printf("Invalid choice.\n");
 }
+int main() {
+    int category;
+    printf("Unit Converter\n");
+    printf("Select conversion category: 1. Length 2. Mass 3. Temperature\n");
+    scanf("%d", &category);
+
+    switch (category) {
+        case 1:
+            convertLength();
+            break;
+        case 2:
+            convertMass();
+            break;
+        case 3:
+            convertTemperature();
+            break;
+        default:
+            printf("Invalid category.\n");
+    }
+    return 0;
+}
