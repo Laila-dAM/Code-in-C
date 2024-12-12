@@ -40,4 +40,28 @@ int main() {
     printf("1. Binary to Decimal\n");
     printf("2. Decimal to Binary\n");
     scanf("%d", &choice);
+  if (choice == 1) {
+        printf("Enter a binary number: ");
+        scanf("%s", binary);
+        int result = binaryToDecimal(binary);
+        if (result == -1) {
+            printf("Invalid binary number.\n");
+        } else {
+            printf("Decimal equivalent: %d\n", result);
+        }
+    } else if (choice == 2) {
+        printf("Enter a decimal number: ");
+        scanf("%d", &decimal);
+        if (decimal < 0) {
+            printf("Please enter a positive decimal number.\n");
+        } else {
+            printf("Binary equivalent: ");
+            decimalToBinary(decimal);
+            printf("\n");
+        }
+    } else {
+        printf("Invalid choice.\n");
+    }
+    return 0;
+}
 
