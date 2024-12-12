@@ -57,4 +57,49 @@ int main() {
             scanf("%d", &B[i][j]);
         }
     }
+     int result[m][n];
+    do {
+        printf("\nChoose an operation:\n");
+        printf("1. Add matrices\n2. Subtract matrices\n3. Multiply matrices\n4. Exit\n");
+        scanf("%d", &choice);
+
+        switch (choice) {
+            case 1:
+                if (m == p && n == n) {
+                    addMatrices(m, n, A, B, result);
+                    printf("Result of addition:\n");
+                    printMatrix(m, n, result);
+                } else {
+                    printf("Matrix sizes are not compatible for addition.\n");
+                }
+                break;
+            case 2:
+                if (m == p && n == n) {
+                    subtractMatrices(m, n, A, B, result);
+                    printf("Result of subtraction:\n");
+                    printMatrix(m, n, result);
+                } else {
+                    printf("Matrix sizes are not compatible for subtraction.\n");
+                }
+                break;
+            case 3:
+                if (n == p) {
+                    int product[m][n];
+                    multiplyMatrices(m, n, p, A, B, product);
+                    printf("Result of multiplication:\n");
+                    printMatrix(m, n, product);
+                } else {
+                    printf("Matrix sizes are not compatible for multiplication.\n");
+                }
+                break;
+            case 4:
+                printf("Exiting...\n");
+                break;
+            default:
+                printf("Invalid choice. Try again.\n");
+        }
+    } while (choice != 4);
+    return 0;
+}
+
 
