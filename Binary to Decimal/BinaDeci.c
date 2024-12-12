@@ -26,3 +26,18 @@ void decimalToBinary(int decimal) {
         i++;
     }
 
+    for (int j = i - 1; j >= 0; j--) {
+        printf("%d", binary[j]);
+    }
+}
+
+int main() {
+    int choice, decimal;
+    char binary[32];
+
+    printf("Binary to Decimal and Vice-Versa Converter\n");
+    printf("Select an option:\n");
+    printf("1. Binary to Decimal\n");
+    printf("2. Decimal to Binary\n");
+    scanf("%d", &choice);
+
