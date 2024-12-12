@@ -14,4 +14,15 @@ int binaryToDecimal(char binary[]) {
     }
     return decimal;
 }
+void decimalToBinary(int decimal) {
+    if (decimal == 0) {
+        printf("0");
+        return;
+    }
+    int binary[32], i = 0;
+    while (decimal > 0) {
+        binary[i] = decimal % 2;
+        decimal /= 2;
+        i++;
+    }
 
