@@ -35,3 +35,26 @@ void printMatrix(int m, int n, int matrix[m][n]) {
         printf("\n");
     }
 }
+
+int main() {
+    int m, n, p, choice;
+    printf("Enter the number of rows and columns for matrix A: ");
+    scanf("%d %d", &m, &n);
+    int A[m][n];
+    printf("Enter the elements of matrix A:\n");
+    for (int i = 0; i < m; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &A[i][j]);
+        }
+    }
+
+    printf("Enter the number of rows and columns for matrix B: ");
+    scanf("%d %d", &p, &n);
+    int B[p][n];
+    printf("Enter the elements of matrix B:\n");
+    for (int i = 0; i < p; i++) {
+        for (int j = 0; j < n; j++) {
+            scanf("%d", &B[i][j]);
+        }
+    }
+
